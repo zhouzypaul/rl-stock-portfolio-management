@@ -14,10 +14,10 @@ def rnn_create():
     """
     H1 = 16
     H2 = 32
-    learning_rate = tf.keras.optimizers.schedules.ExponentialDecay(initial_learning_rate=0.01, decay_rate=0.97,
-                                                                   decay_steps=300)
-    # learning_rate = tf.keras.optimizers.schedules.PiecewiseConstantDecay(boundaries=[10, 30, 60, 100],
-    #                                                                         values=[0.01, 0.005, 0.003, 0.002, 0.001])
+    # learning_rate = tf.keras.optimizers.schedules.ExponentialDecay(initial_learning_rate=0.01, decay_rate=0.97,
+    #                                                                decay_steps=300)
+    learning_rate = tf.keras.optimizers.schedules.PiecewiseConstantDecay(boundaries=[25, 80, 150, 200],
+                                                                            values=[0.01, 0.005, 0.003, 0.002, 0.001])
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
     model = tf.keras.models.Sequential()
     model.add(tf.keras.layers.GRU(H1))  # out shape: (batch_sz, H1)

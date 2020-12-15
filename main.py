@@ -3,8 +3,6 @@ import tensorflow as tf
 from agent import PolicyGradientAgent, save_model, load_model
 from stock_env import StockEnv, discount
 from preprocess import get_data
-from random import randint
-from visual_helpers import visualize_linegraph, visualize_portfolio
 
 
 def train(train_data, model, tickers, randomize, num_rand_stocks=0, episode_max_days=200):
@@ -116,7 +114,7 @@ def main():
     if RANDOMIZE:
         # add more stocks to train_tickers if we want
         train_tickers.extend(["CVS", "DIS", "FDX", "JPM"])
-    test_tickers = ["REGN", "WMT", "JNJ", "HON"]
+    test_tickers = ["REGN", "WMT", "JNJ", "HON"],
     train_data, test_data_same_ticks, x_tickers = get_data(train_tickers) # train_data should be the same for both testing methods
     _, test_data_diff_ticks, y_tickers = get_data(test_tickers)
 

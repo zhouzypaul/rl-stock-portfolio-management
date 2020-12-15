@@ -1,6 +1,8 @@
-# DRL-Stock-Trading (WIP)
+# DRL-Portfolio-Management 
 
 ## Description 
+This is an Reinforcement Learning model using advantage REINFORCE to 
+manage a portfolio in the stock market. 
 
 ## Structure
 > `agent.py` contains the policy gradient RL agent 
