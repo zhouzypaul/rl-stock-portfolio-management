@@ -132,8 +132,3 @@ def unit_test_visualization():
     portfolio = [[1, 2, 3, 2, 1], [2, 3, 4, 3, 1], [3, 2, 1, 4, 2], [5, 9, 2, 1, 8], [1, 3, 2, 2, 3], [4, 3, 1, 1, 4]]
     visualize_portfolio(portfolio, tickers)
 
-    # test, train = get_data()
-    # num_stocks, num_days, datum_size = test.shape
-    # print(num_stocks)
-    # print(num_days)
-    # print(datum_size)

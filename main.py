@@ -128,6 +128,7 @@ def main():
 
 
     # The following block is removed in order to increase the testing period.
+
     # testing_days = 200
     # # we select random testing days for test_data_diff_ticks and test_data_same_ticks
     # assert test_data_same_ticks.shape[1] == test_data_diff_ticks.shape[1]

@@ -73,27 +73,6 @@ class PolicyGradientAgent(tf.keras.Model):
         self.critic_dense_1 = tf.keras.layers.Dense(self.critic_H1, activation='relu', kernel_initializer=initializer)
         self.critic_dense_2 = tf.keras.layers.Dense(self.critic_H2, activation='relu', kernel_initializer=initializer)
         self.critic_dense_3 = tf.keras.layers.Dense(1, kernel_initializer=initializer)
-        # attempt to use the keras.Sequential API
-        # if resume:
-        #     self.actor = tf.keras.models.load_model("saved_actor_model")
-        #     self.critic = tf.keras.models.load_model("saved_critic_model")
-        # else:
-        #     # actor
-        #     self.actor = tf.keras.models.Sequential()
-        #     self.actor.add(tf.keras.layers.GRU(self.actor_H1))
-        #     self.actor.add(tf.keras.layers.Dropout(rate=0.1))
-        #     self.actor.add(tf.keras.layers.GRU(self.actor_H2))
-        #     self.actor.add(tf.keras.layers.Dropout(rate=0.1))
-        #     self.actor.add(tf.keras.layers.Dense(self.num_actions, activation='softmax'))
-        #     self.actor.compile(optimizer=self.optimizer,
-        #           loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False))
-        #     # critic
-        #     self.critic = tf.keras.models.Sequential()
-        #     self.critic.add(tf.keras.layers.Concatenate())
-        #     self.critic.add(tf.keras.layers.Dense(self.critic_H1, activation='relu'))
-        #     self.critic.add(tf.keras.layers.Dense(self.critic_H2, activation='relu'))
-        #     self.critic.add(tf.keras.layers.Dense(1))
-        #     self.critic.compile(optimizer=self.optimizer, loss=tf.keras.losses.MSE)
 
     def call(self, states):
         """
